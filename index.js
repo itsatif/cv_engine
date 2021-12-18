@@ -188,11 +188,24 @@ intr.addEventListener("keypress",(e)=>{
 });
 //Intersets
 
+//JD Update
 
-//
+let jdtarget = document.querySelector(".job-description-value");
+let jdpull = document.querySelector("#job-description");
+console.log(jdtarget);
 
+function jdUpdate(){
+    jdtarget.innerHTML = `<div>${jdpull.value}</div>`
+}
 
+jdpull.addEventListener("keypress",(e)=>{
+    if(e.key == "Enter"){
+        jdUpdate();
+        e.preventDefault();
+    }
+});
 
+//JD Update
 
 
 
