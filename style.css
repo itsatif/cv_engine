@@ -350,7 +350,7 @@ main{
     height: 70px;
     border-radius: 50%;
     position: absolute;
-    top: 430px;
+    top: 45.5%;
     left: 60px;
     text-align: center;
     font-size: 2rem;
@@ -366,7 +366,7 @@ main{
     height: 70px;
     border-radius: 50%;
     position: absolute;
-    top: 430px;
+    top: 45.5%;
     left: 120px;
     text-align: center;
     font-size: 2rem;
@@ -382,7 +382,7 @@ main{
     height: 70px;
     border-radius: 50%;
     position: absolute;
-    top: 430px;
+    top: 45.5%;
     left: 180px;
     text-align: center;
     font-size: 2rem;
@@ -409,7 +409,7 @@ main{
     display: flex;
     justify-content: space-between;
     position: absolute;
-    top: 480px;
+    top: 51.3%;
     left: 80px;
     font-size: 4rem;
     color: black;
@@ -420,7 +420,7 @@ main{
     display: flex;
     justify-content: space-between;
     position: absolute;
-    top: 470px;
+    top: 51.35%;
     left: 140px;
     font-size: 4rem;
     padding-top: 20px;
@@ -432,7 +432,7 @@ main{
     display: flex;
     justify-content: space-between;
     position: absolute;
-    top: 480px;
+    top: 51.3%;
     left: 200px;
     font-size: 4rem;
     color: black;
