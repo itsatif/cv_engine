@@ -41,12 +41,13 @@ let printpage = () =>{
 
 print.addEventListener("click",printpage);
 
-
+let tools = document.querySelector(".tools-div");
 //leftside btn logic
 let editbtn = document.querySelector(".edit");
 console.log(editbtn);
 let leftside = document.querySelector(".left");
 editbtn.addEventListener("click",()=> {
+    tools.style.display="none";
     if(leftside.style.display==="block"){
     leftside.style.display = "none";
     }else{
@@ -59,8 +60,8 @@ editbtn.addEventListener("click",()=> {
 
 //tools btn logic
 let toolsbtn = document.querySelector(".tools");
-let tools = document.querySelector(".tools-div");
-toolsbtn.addEventListener("click",()=>{
+toolsbtn.addEventListener("click",() => {
+    leftside.style.display="none";
     if(tools.style.display==="block"){
     tools.style.display="none";
     }else{
@@ -70,3 +71,34 @@ toolsbtn.addEventListener("click",()=>{
 //tools btn logic
 
 
+//form catch
+
+
+const name1 = document.querySelector("#name");
+console.log(name1);
+let nameperson = document.querySelector(".first-name");
+
+function nameupdate(){
+    nameperson.innerText = name1.value;
+    // nameupdate();  
+}
+
+name1.addEventListener("keypress",(e)=>{
+    if(e.key=="Enter"){
+        console.log('you entered correct')
+        nameupdate();
+        e.preventDefault();
+    }
+})
+
+
+
+//form-catch
+
+
+
+// function addAnother(){
+//     let newNumber = document.createElement("tel");
+
+//     let 
+// }

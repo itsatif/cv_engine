@@ -31,6 +31,7 @@ html,body{
     /* grid-column: 2/6; */
     grid-row: 2/-1;
     grid-column: 1/7;
+    display: none;
     /* height: 60vw; */
     /* scroll-margin-right: 10px; */
     overflow: scroll;
@@ -457,6 +458,7 @@ main{
     /* display: flex;
     justify-content:flex-start;
     position: fixed; */
+    display: none;
     position: fixed;
     top: 100px;
     left: 200px;
