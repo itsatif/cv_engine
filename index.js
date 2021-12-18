@@ -241,7 +241,7 @@ add.addEventListener("keypress",(e)=>{
 let print = document.querySelector(".print");
 let rightSide = document.querySelector(".right");
 let printpage = () =>{
-    window.print();
+    html2pdf().from(rightSide).save();
 };
 
 print.addEventListener("click",printpage);
