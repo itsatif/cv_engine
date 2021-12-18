@@ -139,9 +139,9 @@ let country1 = document.getElementById("countryEdu");
 let btech = document.getElementById("degree");
 console.log(country1.value);
 function EducationDetails(){
-    eduSchool.innerHTML = `<div style="width:300px"><h4>${schoolName.value}</h4></div>
-                             <div>${cityOfSchool.value},${country1.value}</div>
-                             <div><p>${btech.value}</p>${graduationDate.value}</div>`
+    eduSchool.innerHTML = `<div class="jsdivEdu"><h4>${schoolName.value}</h4></div>
+                             <div class="jsdivEdu">${cityOfSchool.value},${country1.value}</div>
+                             <div class="jsdivEdu"><p>${btech.value}</p>${graduationDate.value}</div>`
 }
 
 

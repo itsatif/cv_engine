@@ -474,4 +474,14 @@ main{
     height: 40px;
     width: 40px;
 }
-
+.jsdivEdu{
+    width: 100%;
+    height: 20%;
+    margin-left: 0px;
+    padding-top: 20px;
+    
+}
+.education-description{
+    width: 100%;
+    height: 100%;
+}
