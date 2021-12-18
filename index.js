@@ -33,14 +33,6 @@ window.onclick = function(event) {
   }
 }
   
-let print = document.querySelector(".print");
-  
-let printpage = () =>{
-    window.print();
-};
-
-print.addEventListener("click",printpage);
-
 let tools = document.querySelector(".tools-div");
 //leftside btn logic
 let editbtn = document.querySelector(".edit");
@@ -224,10 +216,37 @@ expselect.addEventListener("keypress",(e)=>{
 });
 //Experience
 
+//address logic
+let add = document.getElementById("address");
+let addtarget = document.querySelector(".address1");
 
+function addUpdate(){
+    addtarget.innerText = add.value;
+}
+
+add.addEventListener("keypress",(e)=>{
+    if(e.key == "Enter"){
+        addUpdate();
+        e.preventDefault();
+    }
+});
+
+//address logic
 
 //form-catch
 
+
+
+//print logic
+let print = document.querySelector(".print");
+let rightSide = document.querySelector(".right");
+let printpage = () =>{
+    window.print();
+};
+
+print.addEventListener("click",printpage);
+
+//print logic
 
 
 // function addAnother(){
