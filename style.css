@@ -7,7 +7,7 @@
 
 html,body{
     height: 120%;
-    overflow: auto;
+    /* overflow: hidden; */
 }
 
 
@@ -17,17 +17,21 @@ html,body{
     grid-template: repeat(12,1fr)/repeat(12,1fr);
 }
 
-header{
-    background-color: brown;
-    /* height: 100px; */
+.container header{
+    background-color:black;
+    grid-row: 1/-1;
+    grid-column: 1/7;
+    text-align: center;
+    color: white;
 }
 
 .left{
     /* height: 100%; */
     /* background-color: bisque; */
     /* grid-column: 2/6; */
-    grid-row: 1/-1;
+    grid-row: 2/-1;
     grid-column: 1/7;
+    /* height: 60vw; */
     /* scroll-margin-right: 10px; */
     overflow: scroll;
 }
@@ -75,8 +79,9 @@ form{
     grid-row: 1/-1;
     grid-column: 7/-1;
     background-color: whitesmoke;
+    /* height: 60vw; */
     /* height: 1000px; */
-    overflow: scroll;
+    /* overflow: scroll; */
 }
 header{
     height: 7%;
