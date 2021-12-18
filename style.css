@@ -280,11 +280,11 @@ main{
     
 } */
 .circle3{
-    height: 100px;
-    width: 100px;
+    height: 10%;
+    width: 13%;
     position: absolute;
-    right: 150px;
-    top: 15px;
+    right: 20%;
+    top: 3%;
     border-radius: 50%;
     background-color:rgb(170, 170, 101);
     text-align: center;
@@ -297,44 +297,44 @@ main{
 }
 
 .circle4{
-    height: 100px;
-    width: 100px;
+    height: 10%;
+    width: 13%;
     position: absolute;
-    right: 200px;
-    top: 60px;
+    right: 28%;
+    top: 6%;
     border-radius: 50%;
     background-color: tomato;
     opacity: 0.7;
     z-index: 20;
 }
 .circle5{
-    height: 80px;
-    width: 80px;
+    height: 9%;
+    width: 12%;
     position: absolute;
-    right: 170px;
-    top: 100px;
+    right: 22%;
+    top: 10%;
     border-radius: 50%;
     background-color: rgb(194, 194, 65);
     opacity: 0.7;
     z-index: 24;
 }
 .circle6{
-    height: 60px;
-    width: 60px;
+    height: 8%;
+    width: 10.5%;
     position: absolute;
-    right: 140px;
-    top: 150px;
+    right: 18%;
+    top: 12%;
     border-radius: 50%;
     background-color: red;
     opacity: 0.7;
     z-index: 28;
 }
 .circle7{
-    height: 100px;
-    width: 100px;
+    height: 10%;
+    width: 13%;
     position: absolute;
-    right: 20px;
-    top: 40px;
+    right: 3%;
+    top: 6%;
     border-radius: 50%;
     background-color: yellow;
     z-index: 30;

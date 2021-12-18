@@ -263,6 +263,7 @@ function addInformationToResume(){
   aboutUpdate()
   EducationDetails()
   numberUpdate()
+  addUpdate()
 }
 let submitresume=document.querySelector("#submitresume");
 submitresume.addEventListener("click",addInformationToResume)
