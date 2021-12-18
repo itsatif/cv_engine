@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+html,body{
+    height: 100%;
+}
+
+
+.container{
+    height: 100%;
+    display: grid;
+    grid-template: repeat(12,1fr)/repeat(12,1fr,);
+}
+
+header{
+    background-color: brown;
+    /* height: 100px; */
+}
+
+.left{
+    height: 100%;
+    /* background-color: bisque; */
+    /* grid-column: 2/6; */
+    grid-row: 3/8;
+    scroll-margin-right: 10px;
+}
+
+form{
+    height: 100%;
+    margin: 20px;
+    /* background-color: blue; */
+}
+
+
+
+#name{
+    margin-bottom: 20px;
+}
+#email{
+    margin-bottom: 20px;
+}
+#address{
+    margin-bottom: 20px;
+    width: 360px;
+}
+#country{
+    margin-bottom: 20px;
+}
+#mobile{
+    margin-bottom: 20px;
+    width: 200px;
+}
+
+#schoolname{
+    width: 360px;
+    margin-bottom: 20px;
+}
+
+#degree{
+    margin-bottom: 20px;
+}
+
+.addes{
+    margin-bottom: 20px;
+}
+
+.right{
+    /* position: fixed; */
+    background-color: blueviolet;
+    /* background-color: blue; */
+    /* grid-column: 6/13;  */
+    grid-row: 8/13;
+    border: 2px solid black;
+}
+
+
+
