@@ -77,5 +77,31 @@ form{
     border: 2px solid black;
 }
 
+.format{
+    margin: 5px;
+    padding: 5px;
+}
 
+.fstyle{
+    margin-top: 5px;
+}
+#input-font{
+    margin-bottom: 5px;
+}
+
+.colors{
+    display: flex;
+}
+
+.tools-div{
+    margin: 20px;
+    border: 2px solid black;
+}
+
+.circle{
+    margin: 5px;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
 
