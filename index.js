@@ -110,9 +110,17 @@ email1.addEventListener("keypress",(e)=>{
 //email update
 
 //about me update
-let about = document.querySelector(".aboutme");
+let about = document.querySelector("#aboutme");
+let aboutTar = document.querySelector(".aboutme-description");
+function aboutUpdate(){
+    aboutTar.innerHTML = `<div style="font-size:15px">${about.value}</div>`
+}
 
-
+about.addEventListener("keypress",(e)=>{
+    if(e.key == "Enter"){
+        aboutUpdate();
+    }
+});
 //mobile number update
 let numberUpdates = document.querySelector(".mobile1");
 let mobileEntered = document.getElementById("mobile");
@@ -163,7 +171,25 @@ cityOfSchool.addEventListener("keypress",(e)=>{
 });
 //education deatils
 
+//Intersets
 
+let intr = document.getElementById("interests");
+let intrtarget = document.querySelector(".sub-symbol-interests");
+
+function intrUpdate(){
+    intrtarget.innerHTML = `<div style="font-size:15px">${intr.value}</div>`
+}
+
+intr.addEventListener("keypress",(e)=>{
+    if(e.key == "Enter"){
+        intrUpdate();
+        e.preventDefault();
+    }
+});
+//Intersets
+
+
+//
 
 
 
