@@ -254,6 +254,30 @@ print.addEventListener("click",printpage);
 
 //     let 
 // }
+
+//skills update
+let skills = document.querySelectorAll("#skill");
+
+let skillstarget = document.querySelectorAll(".skills");
+
+function skillUpdate(){
+    for(let i=0;i<skills.length;i++){
+    skillstarget[i].innerHTML = `<div>${skills[i].value}</div>`
+    }
+}
+
+skills.addEventListener("keypress",(e)=>{
+    if(e.key == "Enter"){
+        skillUpdate();
+        e.preventDefault();
+    }
+});
+
+
+//skills update
+
+
+
 function addInformationToResume(){
   nameupdate()
   emailUpdate()
