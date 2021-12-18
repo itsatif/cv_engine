@@ -267,3 +267,34 @@ function addInformationToResume(){
 }
 let submitresume=document.querySelector("#submitresume");
 submitresume.addEventListener("click",addInformationToResume)
+
+let changeColor1=document.querySelectorAll(".subheading1")
+let changeColor2=document.querySelectorAll(".subheading2")
+let colorchangeHeading=["blue","yellow","red","greenyellow","hotpink","magneta","midnightblue"]
+let colorchangeBackground=["skyblue","lightyellow","tomato","rgb(207, 230, 173)","lightpink","lightcoral","cadetblue"]
+
+function changeColorOfResume(e) {
+    for(let i=0;i<changeColor1.length;i++){
+        console.log("hello");
+        changeColor1[i].style.background = colorchangeHeading[e];
+        changeColor2[i].style.background = colorchangeHeading[e];
+        document.querySelector(".resume").style.background=colorchangeBackground[e]
+    }
+};
+
+
+document.getElementById("c0").addEventListener("click",changeColorOfResume(0))
+document.getElementById("c1").addEventListener("click",changeColorOfResume(1))
+document.getElementById("c2").addEventListener("click",changeColorOfResume(2))
+document.getElementById("c3").addEventListener("click",changeColorOfResume(3))
+document.getElementById("c4").addEventListener("click",changeColorOfResume(4))
+document.getElementById("c5").addEventListener("click",changeColorOfResume(5))
+document.getElementById("c6").addEventListener("click",changeColorOfResume(6))
+
+
+function changefontstyle(){
+    alert()
+    document.querySelector("*").style.fontStyle="cursive"
+}
+document.querySelector("#cursive").addEventListener("click",changefontstyle)
+    
