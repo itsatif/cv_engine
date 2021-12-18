@@ -74,13 +74,31 @@ toolsbtn.addEventListener("click",() => {
 //form catch
 
 
-let name = document.querySelector("#name");
-let nameperson = document.querySelector(".name-person");
+const name1 = document.querySelector("#name");
+console.log(name1);
+let nameperson = document.querySelector(".first-name");
 
 function nameupdate(){
-    if(name.value === ""){
-        console.log("enter name");
-    }
-    nameperson.value = name.value;
+    nameperson.innerText = name1.value;
+    // nameupdate();  
 }
-name.addEventListener("click",nameupdate);
+
+name1.addEventListener("keypress",(e)=>{
+    if(e.key=="Enter"){
+        console.log('you entered correct')
+        nameupdate();
+        e.preventDefault();
+    }
+})
+
+
+
+//form-catch
+
+
+
+// function addAnother(){
+//     let newNumber = document.createElement("tel");
+
+//     let 
+// }
