@@ -6,8 +6,8 @@
 }
 
 html,body{
-    height: 100%;
-    overflow: hidden;
+    height: 120%;
+    /* overflow: hidden; */
 }
 
 
@@ -26,8 +26,9 @@ header{
     /* height: 100%; */
     /* background-color: bisque; */
     /* grid-column: 2/6; */
-    grid-row: 1/-1;
+    grid-row: 2/-1;
     grid-column: 1/7;
+    /* height: 60vw; */
     /* scroll-margin-right: 10px; */
     overflow: scroll;
 }
@@ -75,8 +76,9 @@ form{
     grid-row: 1/-1;
     grid-column: 7/-1;
     background-color: whitesmoke;
+    /* height: 60vw; */
     /* height: 1000px; */
-    overflow: scroll;
+    /* overflow: scroll; */
 }
 header{
     height: 7%;

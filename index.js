@@ -40,3 +40,31 @@ let printpage = () =>{
 };
 
 print.addEventListener("click",printpage);
+
+
+//leftside btn logic
+let editbtn = document.querySelector(".edit");
+console.log(editbtn);
+let leftside = document.querySelector(".left");
+editbtn.addEventListener("click",()=> {
+    if(leftside.style.display==="block"){
+    leftside.style.display = "none";
+    }else{
+        leftside.style.display="block";
+    }
+});
+
+//leftside btn logic
+
+
+//tools btn logic
+let toolsbtn = document.querySelector(".tools");
+let tools = document.querySelector(".tools-div");
+toolsbtn.addEventListener("click",()=>{
+    if(tools.style.display==="block"){
+    tools.style.display="none";
+    }else{
+        tools.style.display="block";
+    }
+}); 
+//tools btn logic
