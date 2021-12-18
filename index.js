@@ -205,7 +205,7 @@ let expselect = document.getElementById("exp");
 let exptarget = document.querySelector(".experience-description");
 
 function expUpdate(){
-    exptarget.innerHTML = `<div style ="font-size:15px">${expselect.value}</div>`
+    exptarget.innerHTML += `<li style ="font-size:15px; padding:5px;">${expselect.value}</li>`
 }
 
 expselect.addEventListener("keypress",(e)=>{
@@ -254,3 +254,16 @@ print.addEventListener("click",printpage);
 
 //     let 
 // }
+function addInformationToResume(){
+  nameupdate()
+  emailUpdate()
+  jdUpdate()
+  expUpdate()
+  intrUpdate()
+  aboutUpdate()
+  EducationDetails()
+  numberUpdate()
+  addUpdate()
+}
+let submitresume=document.querySelector("#submitresume");
+submitresume.addEventListener("click",addInformationToResume)
