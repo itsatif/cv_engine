@@ -174,10 +174,10 @@ cityOfSchool.addEventListener("keypress",(e)=>{
 //Intersets
 
 let intr = document.getElementById("interests");
-let intrtarget = document.querySelector(".sub-symbol-interests");
+let intrtarget = document.querySelector(".interests-description");
 
 function intrUpdate(){
-    intrtarget.innerHTML = `<div style="font-size:15px">${intr.value}</div>`
+    intrtarget.innerHTML += `<li style="font-size:15px; padding-top:10px;">${intr.value}</li>`
 }
 
 intr.addEventListener("keypress",(e)=>{
