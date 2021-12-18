@@ -208,6 +208,23 @@ jdpull.addEventListener("keypress",(e)=>{
 //JD Update
 
 
+//Experience 
+let expselect = document.getElementById("exp");
+let exptarget = document.querySelector(".experience-description");
+
+function expUpdate(){
+    exptarget.innerHTML = `<div style ="font-size:15px">${expselect.value}</div>`
+}
+
+expselect.addEventListener("keypress",(e)=>{
+    if(e.key == "Enter"){
+        expUpdate();
+        e.preventDefault();
+    }
+});
+//Experience
+
+
 
 //form-catch
 
