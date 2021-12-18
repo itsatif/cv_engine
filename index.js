@@ -256,22 +256,24 @@ print.addEventListener("click",printpage);
 // }
 
 //skills update
-let skills = document.querySelectorAll("#skill");
+let skills = document.querySelectorAll(".skilltext");
 
-let skillstarget = document.querySelectorAll(".skills");
-
+let skillstarget = document.querySelectorAll(".skill-value");
+console.log(skills);
 function skillUpdate(){
     for(let i=0;i<skills.length;i++){
-    skillstarget[i].innerHTML = `<div>${skills[i].value}</div>`
+    skillstarget[i].innerHTML += `<li>${skills[i].value}</li>`
     }
 }
 
-skills.addEventListener("keypress",(e)=>{
+
+skills[0].addEventListener("keypress",(e)=>{
     if(e.key == "Enter"){
         skillUpdate();
         e.preventDefault();
     }
 });
+
 
 
 //skills update
