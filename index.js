@@ -113,7 +113,7 @@ email1.addEventListener("keypress",(e)=>{
 let about = document.querySelector("#aboutme");
 let aboutTar = document.querySelector(".aboutme-description");
 function aboutUpdate(){
-    aboutTar.innerHTML = `<div style="font-size:15px">${about.value}</div>`
+    aboutTar.innerHTML = `<div style="font-size:12px; padding-top:8px;">${about.value}</div>`
 }
 
 about.addEventListener("keypress",(e)=>{
@@ -195,7 +195,7 @@ let jdpull = document.querySelector("#job-description");
 console.log(jdtarget);
 
 function jdUpdate(){
-    jdtarget.innerHTML = `<div>${jdpull.value}</div>`
+    jdtarget.innerHTML = `<div style="height:100%; width:100%;">${jdpull.value}</div>`
 }
 
 jdpull.addEventListener("keypress",(e)=>{
