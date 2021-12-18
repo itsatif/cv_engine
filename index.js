@@ -91,6 +91,83 @@ name1.addEventListener("keypress",(e)=>{
     }
 })
 
+//email update
+let email1 = document.getElementById("email");
+
+let emailup = document.querySelector(".email");
+
+function emailUpdate(){
+    emailup.innerText = email1.value;
+};
+
+email1.addEventListener("keypress",(e)=>{
+    if(e.key == "Enter"){
+        emailUpdate();
+        e.preventDefault();
+    }
+});
+
+//email update
+
+//about me update
+let about = document.querySelector(".aboutme");
+
+
+//mobile number update
+let numberUpdates = document.querySelector(".mobile");
+let mobileEntered = document.getElementById("mobile");
+function numberUpdate(){
+    numberUpdates.innerText = mobileEntered.value;
+}
+
+mobileEntered.addEventListener("keypress",(e)=>{
+    if(e.key == "Enter"){
+        numberUpdate();
+        e.preventDefault();
+    }
+});
+//mobile number update
+
+//education description
+
+let schoolName = document.getElementById("schoolname");
+let eduSchool = document.querySelector(".education-description");
+let cityOfSchool = document.getElementById("cityed");
+let eduSchool1 = document.querySelector(".education-description-years");
+let graduationDate = document.querySelector("#graduation");
+let country1 = document.getElementById("countryEdu");
+let btech = document.getElementById("degree");
+console.log(country1.value);
+function EducationDetails(){
+    eduSchool.innerHTML = `<div style="width:300px"><h4>${schoolName.value}</h4></div>
+                             <div>${cityOfSchool.value},${country1.value}</div>
+                             <div><p>${btech.value}</p>${graduationDate.value}</div>`
+}
+
+
+schoolName.addEventListener("keypress",(e)=>{
+    if(e.key=="Enter"){
+        EducationDetails()
+        e.preventDefault();
+    }
+});
+
+
+
+
+cityOfSchool.addEventListener("keypress",(e)=>{
+    if(e.key=="Enter"){
+        EducationDetails()
+        e.preventDefault();
+    }
+});
+//education deatils
+
+
+
+
+
+
 
 
 //form-catch
