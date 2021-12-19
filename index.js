@@ -41,11 +41,12 @@ let editbtn = document.querySelector(".edit");
 console.log(editbtn);
 let leftside = document.querySelector(".left");
 editbtn.addEventListener("click",()=> {
+    
     tools.style.display="none";
-    if(leftside.style.display==="block"){
-    leftside.style.display = "none";
+    if(leftside.style.visibility==="visible"){
+    leftside.style.visibility = "hidden";
     }else{
-        leftside.style.display="block";
+        leftside.style.visibility="visible";
     }
 });
 
@@ -55,7 +56,7 @@ editbtn.addEventListener("click",()=> {
 //tools btn logic
 let toolsbtn = document.querySelector(".tools");
 toolsbtn.addEventListener("click",() => {
-    leftside.style.display="none";
+    leftside.style.visibility="hidden";
     if(tools.style.display==="block"){
     tools.style.display="none";
     }else{
@@ -142,8 +143,8 @@ let btech = document.getElementById("degree");
 console.log(country1.value);
 function EducationDetails(){
     eduSchool.innerHTML = `<div class="jsdivEdu"><h4>${schoolName.value}</h4></div>
-                             <div class="jsdivEdu">${cityOfSchool.value},${country1.value}</div>
-                             <div class="jsdivEdu"><p>${btech.value}</p>${graduationDate.value}</div>`
+     <div class="jsdivEdu">${cityOfSchool.value},${country1.value}</div>
+     <div class="jsdivEdu"><p>${btech.value}</p>${graduationDate.value}</div>`
 }
 
 
@@ -189,7 +190,7 @@ let jdpull = document.querySelector("#job-description");
 console.log(jdtarget);
 
 function jdUpdate(){
-    jdtarget.innerHTML = `<div style="height:100%; width:100%;">${jdpull.value}</div>`
+    jdtarget.innerHTML = `<div style="height:100%; width:100%; font-size:13px">${jdpull.value}</div>`
 }
 
 jdpull.addEventListener("keypress",(e)=>{
@@ -219,14 +220,32 @@ expselect.addEventListener("keypress",(e)=>{
 //Experience
 
 //address logic
-let add = document.getElementById("address");
+let addstreet = document.getElementById("address");
+let addcountry=document.getElementById("country")
+let addcity=document.getElementById("city")
 let addtarget = document.querySelector(".address1");
 
 function addUpdate(){
-    addtarget.innerText = add.value;
+
+    addtarget.innerHTML += `<div>${addcity.value}</div>`
+    addtarget.innerHTML += `<div>${addcountry.value}</div>`
+    addtarget.innerHTML += `<div>${addstreet.value}</div>`
+    
 }
 
-add.addEventListener("keypress",(e)=>{
+addstreet.addEventListener("keypress",(e)=>{
+    if(e.key == "Enter"){
+        addUpdate();
+        e.preventDefault();
+    }
+});
+addcountry.addEventListener("keypress",(e)=>{
+    if(e.key == "Enter"){
+        addUpdate();
+        e.preventDefault();
+    }
+});
+addcity.addEventListener("keypress",(e)=>{
     if(e.key == "Enter"){
         addUpdate();
         e.preventDefault();
@@ -241,48 +260,19 @@ add.addEventListener("keypress",(e)=>{
 
 //print logic
 let print = document.querySelector(".print");
-let rightSide = document.querySelector(".right");
+let rightSide = document.querySelector(".resume");
 let printpage = () =>{
     html2pdf().from(rightSide).save();
 };
 
 print.addEventListener("click",printpage);
 
-//print logic
 
-
-// function addAnother(){
-//     let newNumber = document.createElement("tel");
-
-//     let 
-// }
-
-//skills update
-let skills = document.querySelectorAll(".skilltext");
-
-let skillstarget = document.querySelectorAll(".skill-value");
-console.log(skills);
-function skillUpdate(){
-    for(let i=0;i<skills.length;i++){
-    skillstarget[i].innerHTML += `<li>${skills[i].value}</li>`
-    }
-}
-
-
-skills[0].addEventListener("keypress",(e)=>{
-    if(e.key == "Enter"){
-        skillUpdate();
-        e.preventDefault();
-    }
-});
-
-
-
-//skills update
 
 
 
 function addInformationToResume(){
+    alert()
   nameupdate()
   emailUpdate()
   jdUpdate()
@@ -297,13 +287,109 @@ function addInformationToResume(){
 let submitresume=document.querySelector("#submitresume");
 submitresume.addEventListener("click",addInformationToResume)
 
+let changeColor1=document.querySelectorAll(".subheading1")
+let changeColor2=document.querySelectorAll(".subheading2")
+let changeBackGround=document.querySelector(".resume")
 
-//color change logic
+document.getElementById("c0").addEventListener("click",function(){
+    for(let i=0;i<changeColor1.length;i++){
+    changeColor1[i].style.background="blue"
+    changeColor2[i].style.background="blue"
+    changeBackGround.style.background="skyblue"
+    document.querySelector(".circle1").style.background="rgb(141, 141, 9)"
+    document.querySelector(".circle2").style.background="red"
+    document.querySelector(".circle3").style.background="tomato"
+    document.querySelector(".circle4").style.background="orangered"
+    document.querySelector(".circle5").style.background="orange"    
+}
+})
+document.getElementById("c1").addEventListener("click",function(){
+    for(let i=0;i<changeColor1.length;i++){
+        changeColor1[i].style.background="yellow"
+        changeColor2[i].style.background="yellow"
+        changeBackGround.style.background="lightyellow"
+        document.querySelector(".circle1").style.background="rgb(141, 141, 9)"
+        document.querySelector(".circle2").style.background="blue"
+        document.querySelector(".circle3").style.background="cadetblue"
+        document.querySelector(".circle4").style.background="skyblue"
+        document.querySelector(".circle5").style.background="rgb(43, 220, 226)"    
+    }  
+})
+document.getElementById("c2").addEventListener("click",function(){
+    for(let i=0;i<changeColor1.length;i++){
+        changeColor1[i].style.background="red"
+        changeColor2[i].style.background="red"
+        changeBackGround.style.background="tomato"    
+        document.querySelector(".circle1").style.background="red"
+        document.querySelector(".circle2").style.background="yellow"
+        document.querySelector(".circle3").style.background="rgb(221,221,50)"
+        document.querySelector(".circle4").style.background="rgb(252,252,120)"
+        document.querySelector(".circle5").style.background="yellowgreen"
+    } 
+})
+document.getElementById("c3").addEventListener("click",function(){
+    for(let i=0;i<changeColor1.length;i++){
+        changeColor1[i].style.background="greenyellow"
+        changeColor2[i].style.background="greenyellow"
+        changeBackGround.style.background="rgb(207, 230, 173)" 
+        document.querySelector(".circle1").style.background="green"
+        document.querySelector(".circle2").style.background="blue"
+        document.querySelector(".circle3").style.background="rgb(31,211,31)"
+        document.querySelector(".circle4").style.background="rgb(111,199,111)"
+        document.querySelector(".circle5").style.background="rgb(171,224,171)"   
+    }
+})
+document.getElementById("c4").addEventListener("click",function(){
+    for(let i=0;i<changeColor1.length;i++){
+        changeColor1[i].style.background="hotpink"
+        changeColor2[i].style.background="hotpink"
+        changeBackGround.style.background="lightpink"
+        document.querySelector(".circle1").style.background=" rgb(126, 5, 55)"
+        document.querySelector(".circle2").style.background="blue"
+        document.querySelector(".circle3").style.background="tomato"
+        document.querySelector(".circle4").style.background="palevioletred"
+        document.querySelector(".circle5").style.background="rgb(244,144,284)"    
+    }
+})
+document.getElementById("c5").addEventListener("click",function(){
+    for(let i=0;i<changeColor1.length;i++){
+        changeColor1[i].style.background="magneta"
+        changeColor2[i].style.background="magneta"
+        changeBackGround.style.background="lightcoral" 
+        document.querySelector(".circle1").style.background=" rgb(126, 5, 55)"
+        document.querySelector(".circle2").style.background="blue"
+        document.querySelector(".circle3").style.background="tomato"
+        document.querySelector(".circle4").style.background="rgb(104, 104, 21)"
+        document.querySelector(".circle5").style.background="rgb(192,59,114)"   
+    }
+})
+document.getElementById("c6").addEventListener("click",function(){
+    for(let i=0;i<changeColor1.length;i++){
+        changeColor1[i].style.background="midnightblue"
+        changeColor2[i].style.background="midnightblue"
+        changeBackGround.style.background="cadetblue"    
+        document.querySelector(".circle1").style.background="darkblue"
+        document.querySelector(".circle2").style.background="red"
+        document.querySelector(".circle3").style.background="skyblue"
+        document.querySelector(".circle4").style.background="cadetblue"
+        document.querySelector(".circle5").style.background="blue"
+    }
+})
+document.getElementById("c7").addEventListener("click",function(){
+    for(let i=0;i<changeColor1.length;i++){
+        changeColor1[i].style.background="rgb(116,116,14)"
+        changeColor2[i].style.background="rgb(116,116,14)"
+        changeBackGround.style.background="wheat"
+        document.querySelector(".circle1").style.background="rgb(141, 141, 9)"
+        document.querySelector(".circle2").style.background="blue"
+        document.querySelector(".circle3").style.background="red"
+        document.querySelector(".circle4").style.background="rgb(104, 104, 21)"
+        document.querySelector(".circle5").style.background="rgb(71,71,10)"
+    }
+})
 
-//color change logic
 
-//photo upload button
-
+    
 let photobtn = document.querySelector(".circle7");
 
 var upload_image = "";
