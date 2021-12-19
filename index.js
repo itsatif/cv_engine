@@ -224,9 +224,11 @@ let addcity=document.getElementById("city")
 let addtarget = document.querySelector(".address1");
 
 function addUpdate(){
-    addtarget.innerText = addcity.value;
-    addtarget.innerText = addstreet.value;
-    addtarget.innerText = addcountry.value;
+
+    addtarget.innerHTML += `<div>${addcity.value}</div>`
+    addtarget.innerHTML += `<div>${addcountry.value}</div>`
+    addtarget.innerHTML += `<div>${addstreet.value}</div>`
+    
 }
 
 addstreet.addEventListener("keypress",(e)=>{
