@@ -337,15 +337,11 @@ main{
     right: 3%;
     top: 6%;
     border-radius: 50%;
-    background-color: yellow;
+    /* background-color: yellow; */
     z-index: 30;
     
 }
-.circle7 img{
-    height: 140px;
-    width: 140px;
-    border-radius: 50%;
-}
+
 .mobile{
     width: 70px;
     height: 70px;

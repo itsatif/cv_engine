@@ -1,19 +1,21 @@
-async function TextEditor(element){
-    const newEditor =  await ClassicEditor
-    .create(element,{
-      toolbar: [ 'heading', 'bold', 'italic', 'bulletedList', 'numberedList', 'blockQuote' ],
-    } )
-    return newEditor
+// async function TextEditor(element){
+//     const newEditor =  await ClassicEditor
+//     .create(element,{
+//       toolbar: [ 'heading', 'bold', 'italic', 'bulletedList', 'numberedList', 'blockQuote' ],
+//     } )
+//     return newEditor
    
-  }
+//   }
 
 
-  let editor = document.getElementById("editor");
+//   let editor = document.getElementById("editor");
 
-  ClassicEditor.create("editor")
-  .catch(error => {
-      console.error("error");
-  });
+//   ClassicEditor
+//             .create( document.querySelector( '#editor' ) )
+            
+//             .catch( error => {
+//                 console.error(error);
+//             } );
 
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
@@ -290,37 +292,29 @@ function addInformationToResume(){
   EducationDetails()
   numberUpdate()
   addUpdate()
+  skillUpdate()
 }
 let submitresume=document.querySelector("#submitresume");
 submitresume.addEventListener("click",addInformationToResume)
 
-let changeColor1=document.querySelectorAll(".subheading1")
-let changeColor2=document.querySelectorAll(".subheading2")
-let colorchangeHeading=["blue","yellow","red","greenyellow","hotpink","magneta","midnightblue"]
-let colorchangeBackground=["skyblue","lightyellow","tomato","rgb(207, 230, 173)","lightpink","lightcoral","cadetblue"]
 
-function changeColorOfResume(e) {
-    for(let i=0;i<changeColor1.length;i++){
-        console.log("hello");
-        changeColor1[i].style.background = colorchangeHeading[e];
-        changeColor2[i].style.background = colorchangeHeading[e];
-        document.querySelector(".resume").style.background=colorchangeBackground[e]
-    }
-};
+//color change logic
 
+//color change logic
 
-document.getElementById("c0").addEventListener("click",changeColorOfResume(0))
-document.getElementById("c1").addEventListener("click",changeColorOfResume(1))
-document.getElementById("c2").addEventListener("click",changeColorOfResume(2))
-document.getElementById("c3").addEventListener("click",changeColorOfResume(3))
-document.getElementById("c4").addEventListener("click",changeColorOfResume(4))
-document.getElementById("c5").addEventListener("click",changeColorOfResume(5))
-document.getElementById("c6").addEventListener("click",changeColorOfResume(6))
+//photo upload button
 
+let photobtn = document.querySelector(".circle7");
 
-function changefontstyle(){
-    alert()
-    document.querySelector("*").style.fontStyle="cursive"
-}
-document.querySelector("#cursive").addEventListener("click",changefontstyle)
-    
+var upload_image = "";
+
+photobtn.addEventListener("change",()=>{
+    console.log("I m under circel 7");
+    const reader = new FileReader();
+    reader.addEventListener("load",() => {
+        upload_image = reader.result;
+        photobtn.style.backgroundImage = `url(${upload_image})`;
+    });
+    reader.readAsDataURL(this.file[0]);
+});
+//photo upload button
