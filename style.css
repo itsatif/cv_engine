@@ -7,41 +7,42 @@
 }
 
 html,body{
-    height: 120%;
-    /* overflow: hidden; */
+    height: 140%;
+    width: 100%;
+    position: relative;
 }
 
 
 .container{
     height: 100%;
-    display: grid;
-    grid-template: repeat(12,1fr)/repeat(12,1fr);
+    width: 100%;
 }
 
 .container header{
     background-color:black;
-    grid-row: 1/-1;
-    grid-column: 1/7;
+    width: 100%;
+    height: 5%;
     text-align: center;
     color: white;
+    position: sticky;
+}
+.containerpro{
+    width: 100%;
+    height: 95%;
+    display: flex;
+    overflow: hidden;
 }
 
 .left{
-    /* height: 100%; */
-    /* background-color: bisque; */
-    /* grid-column: 2/6; */
-    grid-row: 2/-1;
-    grid-column: 1/7;
-    display: none;
-    /* height: 60vw; */
-    /* scroll-margin-right: 10px; */
+    width: 50%;
+    height: 100%;
+    visibility: hidden;
     overflow: scroll;
 }
 
 form{
     height: 100%;
     margin: 20px;
-    /* background-color: blue; */
 }
 
 
@@ -52,7 +53,7 @@ form{
 #email{
     margin-bottom: 20px;
 }
-#address{
+.address{
     margin-bottom: 20px;
     width: 360px;
 }
@@ -78,12 +79,11 @@ form{
 }
 
 .right{
-    grid-row: 1/-1;
-    grid-column: 7/-1;
+    height: 100%;
+    width: 50%;
     background-color: whitesmoke;
-    /* height: 60vw; */
-    /* height: 1000px; */
-    /* overflow: scroll; */
+    position: relative;
+    overflow: scroll;
 }
 header{
     height: 7%;
@@ -104,7 +104,10 @@ main{
     background-color: wheat;
     margin: 1%;
     display: flex;
-    position: relative;
+    border: 8px;
+    border-style:double;
+    border-color: black;
+    
 }
 .half1{
     width: 40%;
@@ -228,8 +231,6 @@ main{
     width: 100%;
     color: red;
     font-size: 3rem;
-    padding-top: 50px;
-    
 }
 .sub-symbol-education{
     height: 100%;
@@ -243,7 +244,6 @@ main{
     width: 100%;
     color: black;
     font-size: 6rem;
-
 }
 .sub-symbol-experience2{
     height: 50%;
@@ -263,31 +263,22 @@ main{
     height: 200px;
     width: 200px;
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 1%;
+    top: 1%;
     border-radius: 50%;
     background-color: rgb(141, 141, 9);
     z-index: 20;
+    opacity: 0.5;
 }
-/* .circle2{
-    height: 250px;
-    width: 250px;
-    position: absolute;
-    right: -30px;
-    top: -30px;
-    border-radius: 50%;
-    background-color: rgb(223, 205, 205);
-    opacity: 0.8;
-    
-} */
-.circle3{
-    height: 10%;
-    width: 13%;
+
+.circle2{
+    height: 9%;
+    width: 16%;
     position: absolute;
     right: 20%;
     top: 3%;
     border-radius: 50%;
-    background-color:rgb(170, 170, 101);
+    background-color:blue;
     text-align: center;
     z-index: 20;
     padding-top: 30px;
@@ -295,53 +286,54 @@ main{
     color: white;
     font-weight: 900;
     opacity: 0.7;
+    font-size: 20px;
 }
 
-.circle4{
-    height: 10%;
-    width: 13%;
+.circle3{
+    height: 9%;
+    width: 16%;
     position: absolute;
     right: 28%;
     top: 6%;
     border-radius: 50%;
-    background-color: tomato;
+    background-color: red;
     opacity: 0.7;
     z-index: 20;
 }
-.circle5{
-    height: 9%;
-    width: 12%;
+.circle4{
+    height: 8%;
+    width: 13%;
     position: absolute;
     right: 22%;
     top: 10%;
     border-radius: 50%;
-    background-color: rgb(194, 194, 65);
+    background-color:rgb(71, 71, 10);
     opacity: 0.7;
     z-index: 24;
 }
-.circle6{
-    height: 8%;
-    width: 10.5%;
+.circle5{
+    height: 6%;
+    width: 10%;
     position: absolute;
     right: 18%;
     top: 12%;
     border-radius: 50%;
-    background-color: red;
+    background-color:rgb(104, 104, 21);
     opacity: 0.7;
     z-index: 28;
 }
-.circle7{
+.circle6{
     height: 10%;
-    width: 13%;
+    width: 17%;
     position: absolute;
     right: 3%;
     top: 6%;
     border-radius: 50%;
-    background-color: yellow;
+    /* background-color: yellow; */
     z-index: 30;
     
 }
-.circle7 img{
+.circle6 img{
     height: 140px;
     width: 140px;
     border-radius: 50%;
@@ -351,7 +343,7 @@ main{
     height: 70px;
     border-radius: 50%;
     position: absolute;
-    top: 45.5%;
+    top: 42%;
     left: 60px;
     text-align: center;
     font-size: 2rem;
@@ -367,7 +359,7 @@ main{
     height: 70px;
     border-radius: 50%;
     position: absolute;
-    top: 45.5%;
+    top: 42%;
     left: 120px;
     text-align: center;
     font-size: 2rem;
@@ -383,7 +375,7 @@ main{
     height: 70px;
     border-radius: 50%;
     position: absolute;
-    top: 45.5%;
+    top: 42%;
     left: 180px;
     text-align: center;
     font-size: 2rem;
@@ -410,7 +402,7 @@ main{
     display: flex;
     justify-content: space-between;
     position: absolute;
-    top: 51.3%;
+    top: 46.5%;
     left: 80px;
     font-size: 4rem;
     color: black;
@@ -421,7 +413,7 @@ main{
     display: flex;
     justify-content: space-between;
     position: absolute;
-    top: 51.35%;
+    top: 46.4%;
     left: 140px;
     font-size: 4rem;
     padding-top: 20px;
@@ -433,7 +425,7 @@ main{
     display: flex;
     justify-content: space-between;
     position: absolute;
-    top: 51.3%;
+    top: 46.5%;
     left: 200px;
     font-size: 4rem;
     color: black;
