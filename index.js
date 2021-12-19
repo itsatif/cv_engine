@@ -13,7 +13,7 @@ async function TextEditor(editor){
   }
 
   TextEditor(intr);
-  TextEditor(about);
+//   TextEditor(about);
 
 
 
@@ -118,6 +118,7 @@ function aboutUpdate(){
 about.addEventListener("keypress",(e)=>{
     if(e.key == "Enter"){
         aboutUpdate();
+        e.preventDefault();
     }
 });
 //mobile number update
@@ -279,24 +280,6 @@ let printpage = () =>{
 print.addEventListener("click",printpage);
 
 
-
-
-
-function addInformationToResume(){
-  nameupdate()
-  emailUpdate()
-  jdUpdate()
-  expUpdate()
-  intrUpdate()
-  aboutUpdate()
-  EducationDetails()
-  numberUpdate()
-  addUpdate()
-  skillUpdate()
-}
-let submitresume=document.querySelector("#submitresume");
-submitresume.addEventListener("click",addInformationToResume)
-
 let changeColor1=document.querySelectorAll(".subheading1")
 let changeColor2=document.querySelectorAll(".subheading2")
 let changeBackGround=document.querySelector(".resume")
@@ -454,3 +437,48 @@ font3.addEventListener("click",()=> {
     rightSide.style.fontFamily = "Cursive";
 });
 
+
+//skill logic
+
+const skill1 = document.querySelectorAll(".skilltext");
+console.log(skill1);
+const skilltar = document.querySelectorAll(".skill-value");
+console.log(skilltar);
+function skillUpdat(){
+    skilltar[0].innerHTML = `<div>${skill1.value}</div>`
+   // let oldhtml = skilltar[0].innerHTML;
+
+}
+
+
+skill1[0].addEventListener("keypress",(e) => {
+    if(e.key == "Enter"){
+        skillUpdat();
+        e.preventDefault();
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+function addInformationToResume(){
+    nameupdate()
+    emailUpdate()
+    jdUpdate()
+    expUpdate()
+    intrUpdate()
+    aboutUpdate()
+    EducationDetails()
+    numberUpdate()
+    addUpdate()
+    skillUpdat()
+  }
+  let submitresume=document.querySelector("#submitresume");
+  submitresume.addEventListener("click",addInformationToResume)
