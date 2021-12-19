@@ -1,21 +1,25 @@
-// async function TextEditor(element){
-//     const newEditor =  await ClassicEditor
-//     .create(element,{
-//       toolbar: [ 'heading', 'bold', 'italic', 'bulletedList', 'numberedList', 'blockQuote' ],
-//     } )
-//     return newEditor
+//ckeditor logic
+const intr = document.getElementById("interests");
+const about = document.querySelector("#aboutme");
+const expselect = document.getElementById("exp");
+
+async function TextEditor(editor){
+    const newEditor =  await ClassicEditor
+    .create(editor,{
+      toolbar: [ 'heading', 'bold', 'italic', 'bulletedList', 'numberedList', 'blockQuote' ],
+    } )
+    return newEditor
    
-//   }
+  }
+
+  TextEditor(intr);
+  TextEditor(about);
 
 
-//   let editor = document.getElementById("editor");
 
-//   ClassicEditor
-//             .create( document.querySelector( '#editor' ) )
-            
-//             .catch( error => {
-//                 console.error(error);
-//             } );
+
+
+
 
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
@@ -105,7 +109,7 @@ email1.addEventListener("keypress",(e)=>{
 //email update
 
 //about me update
-let about = document.querySelector("#aboutme");
+
 let aboutTar = document.querySelector(".aboutme-description");
 function aboutUpdate(){
     aboutTar.innerHTML = `<div style="font-size:12px; padding-top:8px;">${about.value}</div>`
@@ -168,7 +172,7 @@ cityOfSchool.addEventListener("keypress",(e)=>{
 
 //Intersets
 
-let intr = document.getElementById("interests");
+
 let intrtarget = document.querySelector(".interests-description");
 
 function intrUpdate(){
@@ -204,7 +208,7 @@ jdpull.addEventListener("keypress",(e)=>{
 
 
 //Experience 
-let expselect = document.getElementById("exp");
+
 let exptarget = document.querySelector(".experience-description");
 
 function expUpdate(){
@@ -395,7 +399,8 @@ document.getElementById("c7").addEventListener("click",function(){
 })
 
 
-    
+
+//photo upload logic
 let photobtn = document.querySelector("#image_input");
 const img = document.querySelector("img");
 
@@ -420,3 +425,32 @@ photobtn.addEventListener("change",photoChange);
 //     }
 // });
 //photo upload button
+
+
+const smallf = document.getElementById("large");
+
+smallf.addEventListener("click",()=>{
+    document.querySelector("body").style.fontSize = "x-large";
+    console.log("font");
+})
+
+
+
+
+
+// const fontSize = document.getElementById("input-font-size");
+// console.log(fontSize);
+// fontSize.addEventListener("change",(e) => {
+//     console.log(fontSize);
+//     const listValue = e.options[e.selectedIndex].text;
+//     document.querySelector("body").style.fontSize = listValue;
+// });
+
+
+//font change logic
+
+const font3 = document.querySelector("#f3");
+font3.addEventListener("click",()=> {
+    rightSide.style.fontFamily = "Cursive";
+});
+

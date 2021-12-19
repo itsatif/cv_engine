@@ -26,11 +26,11 @@
             <div class="left">
                 <form action="" id="form">
                     <label for="name">Name</label><br>
-                    <input type="text" placeholder="Enter your name" value="Pepcoding" id="name"><br>
+                    <input type="text" placeholder="Pepcoding"  id="name"><br>
                     <label for="About me">About me</label><br>
                     <textarea name="" id="aboutme" cols="35" rows="7"></textarea><br><br>
                     <label for="job-description">Job Description</label><br>
-                    <input type="text" placeholder="Job description" id="job-description" style="width: 300px;"><br><br>
+                    <input type="text" placeholder="SDE-Pepcoding" id="job-description" style="width: 300px;"><br><br>
                     <label for="email" style="margin-right: 150px;">Email</label>
                     <label for="city">City</label><br>
                     <input type="email" placeholder="gjp@pepcoding.com" id="email">
@@ -81,8 +81,7 @@
     
                    
                     <h1>Interests</h1><br>
-                    <textarea name="" id="interests" cols="40" rows="7" placeholder="Enter affilation description"
-                        id="editor"></textarea>
+                    <textarea name="" id="interests" cols="40" rows="7" placeholder="Enter affilation description"></textarea>
                 </form>
     
             </div>
@@ -252,22 +251,22 @@
             <div class="fstyle">Font</div>
             <select id="input-font" class="input">
 
-                <option value="Times New Roman" selected="selected">
+                <option value="Sans-Serif">
                     Times New Roman
                 </option>
-                <option value="Arial">Arial</option>
-                <option value="fantasy">Fantasy</option>
-                <option value="cursive" id="cursive1">cursive</option>
+                <option value="Arial" id="f1">Arial</option>
+                <option value="fantasy" id="f2">Fantasy</option>
+                <option value="cursive" id="f3">cursive</option>
             </select>
             <div class="font-size">Font Size</div>
-            <select id="input-font-size" class="input" onchange="changeFontSize (this);">
+            <select id="input-font-size" class="input">
 
-                <option value="30px" selected="selected">
+                <option value="30px" id="small">
                     Smaller
                 </option>
-                <option value="50px">Large</option>
-                <option value="fantasy">XLarge</option>
-                <option value="cursive">XXLarge</option>
+                <option value="50px" id="large">Large</option>
+                <option value="80px" id="xlarge">XLarge</option>
+                <option value="100px" id="xxlarge">XXLarge</option>
             </select>
         </div>
         <div class="colorlogo">Change Theme</div>
