@@ -440,21 +440,28 @@ font3.addEventListener("click",()=> {
 
 //skill logic
 
-const skill1 = document.querySelectorAll(".skilltext");
-console.log(skill1);
+const skill1 = document.querySelector("#skillF");
+const skill2 = document.querySelector("#skill2");
+const skill3 = document.querySelector("#skill3");
+const skill4 = document.querySelector("#skill4");
+const skill5 = document.querySelector("#skill5");
+
+console.log(skill2);
 const skilltar = document.querySelectorAll(".skill-value");
 console.log(skilltar);
 function skillUpdat(){
-    skilltar[0].innerHTML = `<div>${skill1.value}</div>`
-   // let oldhtml = skilltar[0].innerHTML;
-
+    skilltar[0].innerText = skill1.value;
+    skilltar[1].innerText = skill2.value;
+    skilltar[2].innerText = skill3.value;
+    skilltar[3].innerText = skill4.value;
+    skilltar[4].innerText = skill5.value;
 }
 
 
-skill1[0].addEventListener("keypress",(e) => {
-    if(e.key == "Enter"){
-        skillUpdat();
-        e.preventDefault();
+skill1.addEventListener("keypress",(e) => {
+    if(e.key === "Enter"){
+        skillUpdat()
+        e.preventDefault()
     }
 });
 
