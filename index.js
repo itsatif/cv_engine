@@ -262,7 +262,14 @@ addcity.addEventListener("keypress",(e)=>{
 let print = document.querySelector(".print");
 let rightSide = document.querySelector(".resume");
 let printpage = () =>{
-    html2pdf().from(rightSide).save();
+    var opt = {
+        margin:       1,
+        filename:     'resume.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2 },
+        jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
+      };
+    html2pdf().set(opt).from(rightSide).save();
 };
 
 print.addEventListener("click",printpage);
@@ -272,7 +279,6 @@ print.addEventListener("click",printpage);
 
 
 function addInformationToResume(){
-    alert()
   nameupdate()
   emailUpdate()
   jdUpdate()
@@ -390,17 +396,27 @@ document.getElementById("c7").addEventListener("click",function(){
 
 
     
-let photobtn = document.querySelector(".circle7");
+let photobtn = document.querySelector("#image_input");
+const img = document.querySelector("img");
 
-var upload_image = "";
-
-photobtn.addEventListener("change",()=>{
-    console.log("I m under circel 7");
+function photoChange(){
+    photobtn.style.display ="none";
+    const file = this.files[0];
     const reader = new FileReader();
-    reader.addEventListener("load",() => {
-        upload_image = reader.result;
-        photobtn.style.backgroundImage = `url(${upload_image})`;
-    });
-    reader.readAsDataURL(this.file[0]);
-});
+    reader.onload = function(){
+        const result = reader.result;
+        img.src = result;
+    }
+    reader.readAsDataURL(file);
+}
+
+photobtn.addEventListener("change",photoChange);
+
+
+// document.querySelector("body").addEventListener("keypress",(e) => {
+//     if(e.key == "Enter"){
+//         changePhoto();
+//         console.log("uploaded");
+//     }
+// });
 //photo upload button

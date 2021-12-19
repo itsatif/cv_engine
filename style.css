@@ -331,11 +331,12 @@ main{
     border-radius: 50%;
     /* background-color: yellow; */
     z-index: 30;
+    background-size: cover;
     
 }
 .circle6 img{
-    height: 140px;
-    width: 140px;
+    height: 90px;
+    width: 90px;
     border-radius: 50%;
 }
 .mobile{
