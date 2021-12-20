@@ -12,7 +12,7 @@ async function TextEditor(editor){
    
   }
 
-  TextEditor(intr);
+  //TextEditor(intr);
 //   TextEditor(about);
 
 
@@ -434,7 +434,7 @@ smallf.addEventListener("click",()=>{
 
 const font3 = document.querySelector("#f3");
 font3.addEventListener("click",()=> {
-    rightSide.style.fontFamily = "Cursive";
+    rightSide.style.fontFamily = "Sans-Serif";
 });
 
 
