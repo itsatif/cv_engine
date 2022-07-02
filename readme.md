@@ -9,3 +9,4 @@
 => Site is deployed and link is https://bit.ly/3q2PCtq
 
 => Team Akshat, Atif, & Rajeev of GJP Batch Pepcoding.
+![Atif's GitHub stats](https://github-readme-stats.vercel.app/api?username=itsatif&count_private=true)
